@@ -1,0 +1,14 @@
+CREATE TABLE Booking(
+Booking_ID 			VARCHAR(5) 	 					NOT NULL,
+Booking_DateTime 		DATE		  DEFAULT sysdate	 		NOT NULL,
+Booking_Pax 			INT	 	  DEFAULT 1 				NOT NULL,
+Booking_Status 		VARCHAR(16)   DEFAULT 'PENDING PAYMENT', 
+Booking_TotalPrice 	NUMBER(5,2),
+Insurance_ID 		VARCHAR(5),
+Tour_ID 			VARCHAR(5),
+PRIMARY KEY (Booking_ID),
+FOREIGN KEY (Insurance_ID) 		REFERENCES Insurance(Insurance_ID),
+FOREIGN KEY (Tour_ID) 			REFERENCES Tour_Package(Tour_ID),
+CONSTRAINT Chk_Booking_Status  CHECK (UPPER(Booking_Status) IN ('CANCELED', 'REFUNDED', 'PAID', 'PENDING PAYMENT', 'FAILED')),
+CONSTRAINT Chk_Booking_Pax     CHECK (Booking_Pax BETWEEN 1 AND 10)
+);

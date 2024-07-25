@@ -1,0 +1,9 @@
+CREATE TABLE Trip(
+Booking_ID 		VARCHAR(5) 	NOT NULL,
+Customer_ID 		VARCHAR(5) 	NOT NULL,
+Trip_ID 		VARCHAR(6) 	NOT NULL,
+Trip_Datetime  	DATE  		NOT NULL,
+PRIMARY KEY (Booking_ID,Customer_ID,Trip_ID),
+FOREIGN KEY (Booking_ID)  	REFERENCES Booking(Booking_ID),
+FOREIGN KEY (Customer_ID)  	REFERENCES Customer(Customer_ID)
+);

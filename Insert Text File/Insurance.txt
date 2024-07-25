@@ -1,0 +1,10 @@
+INSERT INTO Insurance VALUES ('I0001', 'Life Insurance', 50.00, 500000.00);
+INSERT INTO Insurance VALUES ('I0002', 'Health Insurance', 100.00, 10000.00);
+INSERT INTO Insurance VALUES ('I0003', 'Auto Insurance', 75.00, 30000.00);
+INSERT INTO Insurance VALUES ('I0004', 'Home Insurance', 120.00, 250000.00);
+INSERT INTO Insurance VALUES ('I0005', 'Travel Insurance', 40.00, 100000.00);
+INSERT INTO Insurance VALUES ('I0006', 'Pet Insurance', 25.00, 5000.00);
+INSERT INTO Insurance VALUES ('I0007', 'Disability Insurance', 90.00, 75000.00);
+INSERT INTO Insurance VALUES ('I0008', 'Business Insurance', 150.00, 500000.00);
+INSERT INTO Insurance VALUES ('I0009', 'Renters Insurance', 60.00, 75000.00);
+INSERT INTO Insurance VALUES ('I0010', 'Flood Insurance', 80.00, 200000.00);

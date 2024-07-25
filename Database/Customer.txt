@@ -1,0 +1,13 @@
+CREATE TABLE Customer (
+Customer_ID 				VARCHAR(5)   	NOT NULL,
+Customer_Name 			VARCHAR(50)		NOT NULL,
+Customer_IC 				VARCHAR(14)		NOT NULL,
+Customer_PassportNo 		VARCHAR(9)		NOT NULL,
+Customer_MobileNo 			VARCHAR(13)		NOT NULL,
+Customer_ResidentialAddress 	VARCHAR(150)		NOT NULL,
+Customer_Email 			VARCHAR(50)		NOT NULL,
+Customer_Visa 			VARCHAR(20)		NOT NULL,
+Customer_Gender 			VARCHAR(1)		CHECK(UPPER(Customer_Gender) IN ('M', 'F'))						NOT NULL,
+Customer_BirthDate	      		DATE    		NOT NULL,
+PRIMARY KEY (Customer_ID)
+);

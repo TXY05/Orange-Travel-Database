@@ -1,0 +1,14 @@
+CREATE TABLE Payment (
+Payment_ID 			VARCHAR(5) 				NOT NULL,
+Payment_DateTime 		DATE 		DEFAULT sysdate 	NOT NULL,
+Payment_Amount 		NUMBER(10,2) 			NOT NULL,
+Payment_Method 		VARCHAR(20)  			NOT NULL,
+Payment_Bank 		VARCHAR(30)  			NOT NULL,
+Payment_AccountNo 		VARCHAR(12) 				NOT NULL,
+Payment_DueDate 		DATE  					NOT NULL,
+Booking_ID 			VARCHAR(5)  				NOT NULL,
+PRIMARY KEY (Payment_ID),
+FOREIGN KEY (Booking_ID)	REFERENCES Booking(Booking_ID),
+CONSTRAINT Chk_Payment_Method 					CHECK (UPPER(Payment_Method) IN ('CASH', 'E-WALLET', 'DEBIT CARD', 'CREDIT CARD')),
+CONSTRAINT Chk_Payment_Bank  					CHECK (UPPER(Payment_Bank) IN ('AFFIN BANK', 'AMBANK', 'BANK ISLAM', 'BANK RAKYAT', 'BANK MUAMALAT', 'BSN', 'CIMB CLICKS', 'HONG LEONG BANK', 'HSBC BANK', 'KFH', 'MAYBANK', 'OCBC BANK', 'PUBLIC BANK', 'RHB BANK', 'STANDARD CHARTERED', 'UOB BANK', 'AGROBANK'))
+);

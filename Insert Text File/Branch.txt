@@ -1,0 +1,10 @@
+INSERT INTO Branch VALUES ('BR0001', '109 Jalan Sultan Ismail, Klang, Selangor', 'Selangor North Branch', '+60901234567');
+INSERT INTO Branch VALUES ('BR0002', '456 Lebuh Carnavon, George Town, Penang', 'Penang Central Branch', '+60123456789');
+INSERT INTO Branch VALUES ('BR0003', '321 Jalan Labuk, Lahad Datu, Sabah', 'Sabah East Branch', '+60456789012');
+INSERT INTO Branch VALUES ('BR0004', '543 Jalan Tun Ismail, Kuantan, Pahang', 'Pahang Central Branch', '+60778901234');
+INSERT INTO Branch VALUES ('BR0005', '543 Jalan Sultan Tengah, Sibu, Sarawak', 'Sarawak North Branch', '+60890123456');
+INSERT INTO Branch VALUES ('BR0006', '876 Persiaran Sukan, Shah Alam, Selangor', 'Selangor South Branch', '+60890123456');
+INSERT INTO Branch VALUES ('BR0007', '321 Jalan Macalister, George Town, Penang', 'Penang South Branch', '+60345678901');
+INSERT INTO Branch VALUES ('BR0008', '876 Jalan Bukit Ubi, Kuantan, Pahang', 'Pahang South Branch', '+60889012345');
+INSERT INTO Branch VALUES ('BR0009', '654 Jalan Kuala Kedah, Alor Setar, Kedah', 'Kedah Central Branch', '+60445678901');
+INSERT INTO Branch VALUES ('BR0010', '210 Jalan Tun Abdul Razak, Batu Pahat, Johor', 'Johor North Branch', '+60678901234');

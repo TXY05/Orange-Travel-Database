@@ -1,0 +1,8 @@
+CREATE TABLE Branch (
+Branch_ID           	VARCHAR(6)     					NOT NULL,
+Branch_Address      	VARCHAR(50),
+Branch_Name        	VARCHAR(30),
+Branch_Phone_No     	VARCHAR(13),
+PRIMARY KEY (Branch_ID),
+CONSTRAINT Chk_Branch_Phone_No CHECK (REGEXP_LIKE(Branch_Phone_No, '^\+60[1-9]\d{1,10}$'))
+);

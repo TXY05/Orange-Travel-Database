@@ -1,0 +1,7 @@
+CREATE TABLE Insurance (
+Insurance_ID 			VARCHAR(5)	   NOT NULL,
+Insurance_Type 			VARCHAR(30),
+Insurance_Premium 			NUMBER(5,2),
+Insurance_Coverage 		NUMBER(8,2),
+PRIMARY KEY(Insurance_ID)
+);

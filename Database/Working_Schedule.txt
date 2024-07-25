@@ -1,0 +1,9 @@
+CREATE TABLE Working_Schedule(
+Tour_ID 			VARCHAR(5) 	NOT NULL,
+Staff_ID 			VARCHAR(5) 	NOT NULL,
+Schedule_startDate	 	DATE  		NOT NULL,
+Schedule_Duration 		INT  		NOT NULL,
+PRIMARY KEY (Tour_ID,Staff_ID),
+FOREIGN KEY (Tour_ID) 	REFERENCES Tour_Package(Tour_ID),
+FOREIGN KEY (Staff_ID) 	REFERENCES Staff(Staff_ID)
+);

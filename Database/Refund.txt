@@ -1,0 +1,11 @@
+CREATE TABLE Refund (
+Refund_ID  			VARCHAR(5)					NOT NULL,
+Refund_DateTime  		DATE  			DEFAULT sysdate 	NOT NULL,
+Refund_Amount  		NUMBER(10,2)	  				NOT NULL,
+Refund_Bank  		VARCHAR(30)	  				NOT NULL,
+Refund_AccountNo  		NUMBER(12)	  				NOT NULL,
+Cancellation_ID  		VARCHAR(6)	  				NOT NULL,
+PRIMARY KEY (Refund_ID),
+FOREIGN KEY (Cancellation_ID) REFERENCES Cancellation (Cancellation_ID),
+CONSTRAINT Ckh_Refund_Bank 	CHECK (UPPER(Refund_Bank) IN ('AFFIN BANK', 'AMBANK', 'BANK ISLAM', 'BANK RAKYAT', 'BANK MUAMALAT', 'BSN', 'CIMB CLICKS', 'HONG LEONG BANK', 'HSBC BANK', 'KFH', 'MAYBANK', 'OCBC BANK', 'PUBLIC BANK', 'RHB BANK', 'STANDARD CHARTERED', 'UOB BANK', 'AGROBANK'))
+);

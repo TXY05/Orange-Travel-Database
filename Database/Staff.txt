@@ -1,0 +1,11 @@
+CREATE TABLE Staff (
+Staff_ID  		VARCHAR(5)  					NOT NULL,
+Staff_Name  		VARCHAR(50)			  		NOT NULL,
+Staff_Position 	VARCHAR(30)			  		NOT NULL,
+Staff_Gender	 	VARCHAR(1)  		CHECK(UPPER(Staff_Gender) IN ('M', 'F')) NOT NULL,
+Staff_Salary	  	NUMBER(10,2)  				NOT NULL,
+Staff_DateJoin  	DATE  			DEFAULT sysdate  	NOT NULL,
+Branch_ID  		VARCHAR(6)		  			NOT NULL,
+PRIMARY KEY (Staff_ID),
+FOREIGN KEY (Branch_ID) REFERENCES Branch (Branch_ID)
+);

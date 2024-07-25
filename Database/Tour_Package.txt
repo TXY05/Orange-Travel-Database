@@ -1,0 +1,12 @@
+CREATE TABLE Tour_Package (
+Tour_ID 			VARCHAR(5) 		NOT NULL,
+Tour_Name 			VARCHAR(30) 		NOT NULL,
+Tour_Location 		VARCHAR(30) 		NOT NULL,
+Tour_Oversea	 		VARCHAR(1)  		CHECK(UPPER(Tour_Oversea	) IN ('Y', 'N'))      						NOT NULL,
+Tour_customizedPackage 	VARCHAR(1)  		CHECK(UPPER(Tour_customizedPackage) IN ('Y', 'N'))       				NOT NULL,
+Tour_Date 			DATE 			NOT NULL,
+Tour_Price 			NUMBER(10,2)	  	NOT NULL,
+Tour_Duration 		INT 			NOT NULL,
+Tour_Details	 		VARCHAR(150)	 	NOT NULL,
+PRIMARY KEY (Tour_ID)
+); 

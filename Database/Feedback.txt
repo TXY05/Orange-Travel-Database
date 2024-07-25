@@ -1,0 +1,12 @@
+CREATE TABLE Feedback (
+Feedback_ID  		VARCHAR(5)						NOT NULL,
+Feedback_Rating  		INT  			DEFAULT 3			NOT NULL,
+Feedback_Content  		VARCHAR(255),
+Feedback_Date  		DATE  			DEFAULT sysdate,
+Customer_ID  		VARCHAR(5),
+Booking_ID  			VARCHAR(5),
+PRIMARY KEY (Feedback_ID),
+FOREIGN KEY (Customer_ID)		REFERENCES Customer(Customer_ID),
+FOREIGN KEY (Booking_ID)			REFERENCES Booking(Booking_ID),
+CONSTRAINT Chk_Feedback_Rating 	CHECK (Feedback_Rating BETWEEN 1 AND 5)
+);
